@@ -15,17 +15,15 @@ env:
 
 jobs:
   expresiones:
-    if: ${{inputs.nombre == 'beto'}}
+    if: ${{ github.event.inputs.nombre == 'beto' }}
     runs-on: ubuntu-latest
     steps:
       - name: imprimir
-        run: echo beto
-  
+        run: echo "beto"
+
   variable_global:
-    if: ${{env.GLOBAL_VAR != 'HOLA'}}
     runs-on: ubuntu-latest
     steps:
-      - name: variableGlobal
+      - name: Mostrar solo si GLOBAL_VAR != HOLA
+        if: ${{ env.GLOBAL_VAR != 'HOLA' }}
         run: echo $GLOBAL_VAR
-
-        
