@@ -1,26 +1,4 @@
-Skip to content
-Navigation Menu
-JoseAramburo
-github_actions
-
-Type / to search
-Code
-Issues
-Pull requests
-3
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Paso 0, Inicializar repo
-Delete .github/workflows/hola-mundo.yml #4
-Jobs
-Run details
-Workflow file for this run
-.github/workflows/0-inicio.yml at 26f7c6e
-name: Paso 0, Inicializar repo
+name: triggers
 
 # This step triggers after the learner creates a new repository from the template
 # This step sets STEP to 1
