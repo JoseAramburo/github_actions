@@ -1,7 +1,17 @@
 name: Expresiones
 run-name: ¡Estoy aprendiendo a usar Expresiones!
 on:
-  push:
+  workflow_dispatch:
+    inputs:
+      edad:
+        description: 'Edad'
+        required: true
+        type: integer
+      nombre:
+        description: 'Tu nombre'
+        required: true
+        default: 'Juan'
+        type: string
 jobs:
   mayor:
     if: ${{ inputs.edad >= 18 }} 
