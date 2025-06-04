@@ -20,6 +20,6 @@ jobs:
         - name: 'valor github'
           run: echo "${{github.actor}} corre"
         - name: 'nuevo variable'
-          run: echo VARIABLE_ENV
+          run: echo $VARIABLE_ENV
     
 
