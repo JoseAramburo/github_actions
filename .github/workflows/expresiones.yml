@@ -10,12 +10,22 @@ on:
         default: 'beto'
         type: string
 
+env:
+  GLOBAL_VAR: "Este valor está en todo el workflow"
+
 jobs:
- expresiones:
-   if: ${{inputs.nombre == 'beto'}}
-   runs-on: ubuntu-latest
-   steps:
-     - name: imprimir
-       run: echo beto
+  expresiones:
+    if: ${{inputs.nombre == 'beto'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: imprimir
+        run: echo beto
+  
+  variable_global:
+    if: ${{env.GLOBAL_VAR != 'HOLA'}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: variableGlobal
+        run: echo $GLOBAL_VAR
 
         
