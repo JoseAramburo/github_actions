@@ -1,5 +1,5 @@
-name: contexto
-run-name: reto-contextos
+name: variable
+run-name: reto-variable
 
 on: 
   workflow_dispatch:
