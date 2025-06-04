@@ -21,6 +21,6 @@ jobs:
         - name: 'valor github'
           run: echo "${{github.actor}} corre"
         - name: 'nuevo variable'
-          run: echo $VARIABLE_ENV && echo MASCO
+          run: echo $VARIABLE_ENV && echo $MASCO
     
 
