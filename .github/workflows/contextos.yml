@@ -1,0 +1,25 @@
+name: contexto
+run-name: reto-contextos
+
+on: 
+  workflow_dispatch:
+    inputs:
+        edad:
+          description: 'edades'
+          required: true
+          default: '28'
+          type: string
+
+jobs:
+  contextos:
+    if: ${{ inputs.edad < 15 }}
+    runs-on: ubuntu-latest
+    env:
+        VARIABLE_ENV: 'variabel global'
+    steps:
+        - name: 'valor github'
+          run: echo "${{github.actor}} corre"
+        - name: 'nuevo variable'
+          run: echo VARIABLE_ENV
+    
+
